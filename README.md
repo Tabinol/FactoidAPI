@@ -1,4 +1,4 @@
 FactoidAPI
 ==========
 
-API for Factoid
+API for Factoid. See the GitHub wiki for more informations.
