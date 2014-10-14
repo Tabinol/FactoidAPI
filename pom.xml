@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>me.tabinol.factoid</groupId>
-  <artifactId>FactoidAPI</artifactId>
-  <version>0.5.0</version>
-	
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>me.tabinol.factoid</groupId>
+	<artifactId>FactoidAPI</artifactId>
+	<version>0.5.0</version>
+
 	<properties>
 		<build.number>SNAPSHOT</build.number>
 	</properties>
@@ -36,6 +37,7 @@
 				</includes>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -46,24 +48,25 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.10.1</version>
-                <configuration>
-                    <!-- Default configuration for all reports -->
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>javadoc</goal>
-                            <goal>test-javadoc</goal>
-                        </goals>
-                        <phase>site</phase>
-                        <configuration>
-                            <!-- Specific configuration for the given reports -->
-                        </configuration>
-                    </execution>
+				<configuration>
+					<!-- Default configuration for all reports -->
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>javadoc</goal>
+							<goal>test-javadoc</goal>
+						</goals>
+						<phase>site</phase>
+						<configuration>
+							<!-- Specific configuration for the given reports -->
+						</configuration>
+					</execution>
 					<execution>
 						<id>attach-javadocs</id>
 						<goals>
@@ -72,9 +75,37 @@
 					</execution>
 				</executions>
 			</plugin>
+
+			<plugin>
+				<groupId>de.oscillation.maven</groupId>
+				<artifactId>doxygen-maven-plugin</artifactId>
+				<version>0.1.0</version>
+				<configuration>
+					<workingDirectory>${basedir}</workingDirectory>
+					<executable>doxygen</executable>
+					<doxyfile>Doxyfile</doxyfile>
+					<autogen>false</autogen>
+				</configuration>
+				<executions>
+					<execution>
+						<id>clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>generate</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>Tabinol.me Artifactory</id>
