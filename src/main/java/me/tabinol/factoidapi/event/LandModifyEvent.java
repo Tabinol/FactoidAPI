@@ -61,7 +61,10 @@ public class LandModifyEvent extends LandEvent {
 		OWNER_CHANGE,
 		
 		/** The land rename. */
-		RENAME;
+		RENAME,
+		
+		/** Change the faction territory or siege */
+		FACTION_TERRITORY_CHANGE;
 	}
 
     /** The Constant handlers. */
@@ -118,7 +121,7 @@ public class LandModifyEvent extends LandEvent {
     
     /**
      * Gets the new object. This object can be an Area, a playerContainer (for RESIDENT or owner change),
-     * a flag, a permission or a String for a name change.
+     * a flag, a permission, a String for a name change or a faction.
      *
      * @return the new object
      */
