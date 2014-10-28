@@ -420,13 +420,19 @@ public interface ILand extends IDummyLand {
      */
     public boolean isPlayerinLandNoVanish(Player player, Player fromPlayer);
     
-    // No parent verify
     /**
-     * Gets the players in land.
+     * Gets the players in land. This method does not look in children lands
      *
      * @return the players in land
      */
     public Set<Player> getPlayersInLand();
+    
+    /**
+     * Gets the players in land and children.
+     *
+     * @return the players in land and children
+     */
+    public Set<Player> getPlayersInLandAndChildren();
     
     /**
      * Gets all players in land and can be visible from the other player.
