@@ -309,6 +309,13 @@ public interface ILand extends IDummyLand {
     public ILand getParent();
     
     /**
+     * Sets the parent land
+     * 
+     * @param parent the parent land (or null for no parent)
+     */
+    public void setParent(ILand parent);
+    
+    /**
      * Gets a ancestor.
      *
      * @param gen the generation upside (1 = parent, 2 = grand-parent, ...)
