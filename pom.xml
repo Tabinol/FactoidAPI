@@ -109,14 +109,14 @@
 
 	<distributionManagement>
 		<repository>
-			<id>Tabinol.me Artifactory</id>
-			<name>Tabinol.me Artifactory-releases</name>
-			<url>http://artifactory.tabinol.me/artifactory/public</url>
+			<id>Tabinol.me Nexus</id>
+			<name>Tabinol.me Nexus-releases</name>
+			<url>http://nexus.tabinol.me/content/groups/public</url>
 		</repository>
 		<snapshotRepository>
-			<id>Tabinol.me Artifactory</id>
-			<name>Tabinol.me Artifactory-snapshots</name>
-			<url>http://artifactory.tabinol.me/artifactory/public</url>
+			<id>Tabinol.me Nexus</id>
+			<name>Tabinol.me Nexus-snapshots</name>
+			<url>http://nexus.tabinol.me/content/groups/public/</url>
 		</snapshotRepository>
 	</distributionManagement>
 </project>
