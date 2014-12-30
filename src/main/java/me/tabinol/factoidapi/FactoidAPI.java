@@ -24,6 +24,7 @@ import me.tabinol.factoidapi.factions.IFactions;
 import me.tabinol.factoidapi.lands.ILand;
 import me.tabinol.factoidapi.lands.ILands;
 import me.tabinol.factoidapi.lands.areas.ICuboidArea;
+import me.tabinol.factoidapi.lands.types.ITypes;
 import me.tabinol.factoidapi.parameters.IParameters;
 import me.tabinol.factoidapi.playercontainer.EPlayerContainerType;
 import me.tabinol.factoidapi.playercontainer.IPlayerContainer;
@@ -89,6 +90,17 @@ public final class FactoidAPI {
     	return iFactoid.iLands();
     }
 
+    /**
+     * I types.
+     *
+     * @return the i types
+     * @see IFactoid#iTypes()
+     */
+    public static ITypes iTypes() {
+    	
+    	return iFactoid.iTypes();
+    }
+    
     /**
      * I parameters.
      *

@@ -25,6 +25,7 @@ import java.util.UUID;
 
 import me.tabinol.factoidapi.factions.IFaction;
 import me.tabinol.factoidapi.lands.areas.ICuboidArea;
+import me.tabinol.factoidapi.lands.types.IType;
 import me.tabinol.factoidapi.parameters.IFlagType;
 import me.tabinol.factoidapi.parameters.ILandFlag;
 import me.tabinol.factoidapi.parameters.IPermissionType;
@@ -40,6 +41,20 @@ import org.bukkit.entity.Player;
 public interface ILand extends IDummyLand {
 
     /**
+     * Sets the type.
+     *
+     * @param type the new type
+     */
+    public void setType(IType type);
+	
+	/**
+	 * Gets the type.
+	 *
+	 * @return the type
+	 */
+	public IType getType();
+	
+	/**
      * Restore the land to default configuration. 
      * WARNING: The owner will be "nobody" and
      * all permissions and flags will be restored to default!

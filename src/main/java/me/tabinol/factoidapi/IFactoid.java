@@ -22,6 +22,7 @@ import me.tabinol.factoidapi.factions.IFactions;
 import me.tabinol.factoidapi.lands.ILand;
 import me.tabinol.factoidapi.lands.ILands;
 import me.tabinol.factoidapi.lands.areas.ICuboidArea;
+import me.tabinol.factoidapi.lands.types.ITypes;
 import me.tabinol.factoidapi.parameters.IParameters;
 import me.tabinol.factoidapi.playercontainer.EPlayerContainerType;
 import me.tabinol.factoidapi.playercontainer.IPlayerContainer;
@@ -51,6 +52,13 @@ public interface IFactoid {
      * @return the lands
      */
     public ILands iLands();
+    
+    /**
+     * Gets all land types informations
+     *
+     * @return the types
+     */
+    public ITypes iTypes();
 
     /**
      * Gets all parameters (flags and permissions). If you want to register
