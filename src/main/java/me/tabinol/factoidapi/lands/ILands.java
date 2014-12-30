@@ -22,6 +22,7 @@ import java.util.UUID;
 
 import me.tabinol.factoidapi.exceptions.AFactoidLandException;
 import me.tabinol.factoidapi.lands.areas.ICuboidArea;
+import me.tabinol.factoidapi.lands.types.IType;
 import me.tabinol.factoidapi.playercontainer.IPlayerContainer;
 
 import org.bukkit.Location;
@@ -193,6 +194,14 @@ public interface ILands {
     public Collection<ILand> getLands(IPlayerContainer owner);
 
 
+    /**
+     * Gets the lands from type.
+     *
+     * @param type the type
+     * @return the lands
+     */
+    public Collection<ILand> getLands(IType type);
+    
     /**
      * Gets the cuboid areas.
      *
