@@ -203,7 +203,14 @@ public interface ILand extends IDummyLand {
      * in flag type : Double, Boolean, String or String[]
      * @param inheritance the inheritance (normally true)
      */
-    public void addFlag(ILandFlag flagType, Object value, boolean inheritance);
+    public void addFlag(IFlagType flagType, Object value, boolean inheritance);
+    
+    /**
+     * Adds a flag.
+     *
+     * @param LandFlag the flag type
+     */
+    public void addFlag(ILandFlag LandFlag);
     
     /**
      * Removes a flag.
