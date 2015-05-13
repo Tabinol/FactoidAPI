@@ -17,11 +17,31 @@
  */ 
 package me.tabinol.factoidapi.parameters;
 
+import org.bukkit.Material;
+
 /**
  * The Interface IParameters. It is where you can register or get permissions
  * or flags.
  */
 public interface IParameters {
+
+    /**
+     *  Prefix of specials permissions (ex: PLACE_SIGN).
+     */
+	public enum SpecialPermPrefix {
+    	
+	    /** Place a block */
+	    PLACE,
+    	
+	    /** Prevent place a block */
+	    NOPLACE,
+    	
+	    /** Destroy a block */
+	    DESTROY,
+    	
+	    /** Prevent destroy a block */
+	    NODESTROY;
+    }
 
     /**
      * Register permission type. Keep the returned value. a Permission type is
@@ -61,4 +81,14 @@ public interface IParameters {
      * @return the flag type
      */
     public IFlagType getFlagType(String flagName);
+    
+    /**
+     * Gets the special permission (prefix_mat). This method is
+     * here to reduce CPU usage.
+     *
+     * @param prefix the prefix ([NO]PLACE, [NO]DESTROY)
+     * @param mat the material (Bukkit)
+     * @return the permission type
+     */
+    public IPermissionType getSpecialPermission(SpecialPermPrefix prefix, Material mat);
 }
