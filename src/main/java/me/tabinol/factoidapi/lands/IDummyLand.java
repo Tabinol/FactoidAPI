@@ -50,6 +50,13 @@ public interface IDummyLand {
     public World getWorld();
     
     /**
+     * Create a new dummyLand with the specific name. Permissions and flags are copied.
+     * @param worldName The name of the dummy land or world
+     * @return the dummy land
+     */
+    public IDummyLand copyOfPermsFlags(String worldName);
+    
+    /**
      * Gets the sets of player containers having a permission.
      *
      * @return the sets the player containers
