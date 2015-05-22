@@ -23,6 +23,13 @@ package me.tabinol.factoidapi.parameters;
 public interface ILandFlag {
 
     /**
+     * Copy of.
+     *
+     * @return a copy of this object
+     */
+    public ILandFlag copyOf();
+
+    /**
      * Equals.
      *
      * @param lf2 the lf2

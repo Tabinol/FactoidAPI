@@ -24,6 +24,13 @@ package me.tabinol.factoidapi.parameters;
 public interface IPermission {
 
     /**
+     * Copy of.
+     *
+     * @return a copy of this object
+     */
+    public IPermission copyOf();
+	
+	/**
      * Gets the perm type.
      *
      * @return the perm type

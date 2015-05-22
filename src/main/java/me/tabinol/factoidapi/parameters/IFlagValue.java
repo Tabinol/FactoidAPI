@@ -23,7 +23,14 @@ package me.tabinol.factoidapi.parameters;
  */
 public interface IFlagValue {
 
-	/**
+    /**
+     * Copy of.
+     *
+     * @return a copy of this object
+     */
+    public IFlagValue copyOf();
+
+    /**
 	 * Sets the value. IMPORTANT: You must use the same type has the flag type:
 	 * Boolean, Double, String or String[].
 	 *
