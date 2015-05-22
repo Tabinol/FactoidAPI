@@ -50,11 +50,11 @@ public interface IDummyLand {
     public World getWorld();
     
     /**
-     * Copy permissions and flags from a this land to an other.
+     * Copy permissions and flags from this land to an other.
      * Duplicated permissions and flags will be overwrite.
      * @param desLand The destination land or dummy land.
      */
-    public void copyPermsFlags(IDummyLand desLand);
+    public void copyPermsFlagsTo(IDummyLand desLand);
     
     /**
      * Gets the sets of player containers having a permission.
