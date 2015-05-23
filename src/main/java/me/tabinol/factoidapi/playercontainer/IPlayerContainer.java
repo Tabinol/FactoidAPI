@@ -17,6 +17,8 @@
  */
 package me.tabinol.factoidapi.playercontainer;
 
+import me.tabinol.factoidapi.lands.ILand;
+
 import org.bukkit.entity.Player;
 
 
@@ -62,6 +64,18 @@ public interface IPlayerContainer {
      * @return true, if successful
      */
     public boolean hasAccess(Player player);
+    
+    /**
+     * Check if the player has access or is member of this player container.
+     * The land option is for assume the player to check if the player is
+     * owner/resident/... of this specific land. This method is only used
+     * from a DummyLand (Default or World)
+     * 
+     * @param player the player
+     * @param land from what land?
+     * @return true, if successful
+     */
+    public boolean hasAccess(Player player, ILand land);
     
     /**
      * Gets the printable output.
